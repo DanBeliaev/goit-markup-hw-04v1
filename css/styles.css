@@ -34,6 +34,9 @@ img {
 .header {
     background: #FFF;
     border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
     display: flex;
@@ -60,6 +63,7 @@ img {
 .header-menu{
     display: flex;
     gap: 40px;
+    color: #404bbf;
 }
 .header-link-menu {
     color: #2E2F42;
@@ -69,8 +73,24 @@ img {
     letter-spacing: 0.02em;
     padding-top: 24px;
     padding-bottom: 24px;
-    display: block;               
+    display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);            
 }    
+.link {
+    position: relative;
+    color: #404bbf;
+}
+    
+.link::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
 
 .header-link-menu:hover {
     color: #404BBF;
@@ -93,6 +113,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address-link:hover{
     color: #404BBF;
